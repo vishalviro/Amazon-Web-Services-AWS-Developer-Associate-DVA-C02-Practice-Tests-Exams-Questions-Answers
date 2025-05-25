@@ -523,19 +523,19 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Improve the performance of S3 PUT operations.
 - [ ] Improve the latency of deployments performed by AWS CodeDeploy.
-- [ ] Improve latency and throughput for read-heavy application workloads.
+- [x] Improve latency and throughput for read-heavy application workloads.
 - [ ] Reduce the time required to merge AWS CodeCommit branches.
-- [ ] Improve performance of compute-intensive applications.
+- [x] Improve performance of compute-intensive applications.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following services are key/value stores? (Choose 3 answers)
 
-- [ ] Amazon ElastiCache.
+- [x] Amazon ElastiCache.
 - [ ] Simple Notification Service.
-- [ ] DynamoDB.
+- [x] DynamoDB.
 - [ ] Simple Workflow Service.
-- [ ] Simple Storage Service.
+- [x] Simple Storage Service.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -544,7 +544,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Place the Lambda function and target group in the same account.
 - [ ] Send the request body to the Lambda function with a size less than 1 MB 0.
 - [ ] Include the Base64 encoding status status code, status description, and headers in the Lambda function.
-- [ ] Enable the multi-value headers on the ALB.
+- [x] Enable the multi-value headers on the ALB.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -553,16 +553,16 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Write to the cache directly and sync the backend at a later time.
 - [ ] Write to the backend first and wait for the cache to expire.
 - [ ] Write to the cache and the backend at the same time.
-- [ ] Write to the backend first and invalidate the cache.
+- [x] Write to the backend first and invalidate the cache.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Developer wants to upload data to Amazon S3 and must encrypt the data in transit. Which of the following solutions will accomplish this task? (Choose TWO)
 
 - [ ] Set up hardware VPN tunnels to a VPC and access S3 through a VPC endpoint.
-- [ ] Set up Client-Side Encryption with an AWS KMS-Managed Customer Master Key.
+- [x] Set up Client-Side Encryption with an AWS KMS-Managed Customer Master Key.
 - [ ] Set up Server-Side Encryption with AWS KMS-Managed Keys.
-- [ ] Transfer the data over an SSL connectionSet up Server-Side Encryption with S3-Managed Keys.
+- [x] Transfer the data over an SSL connectionSet up Server-Side Encryption with S3-Managed Keys.
 - [ ] Set up Server-Side Encryption with S3-Managed Keys.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -570,7 +570,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A Developer wants to encrypt new objects that are being uploaded to an Amazon S3 bucket by an application. There must be an audit trail of who has used the key during this process. There should be no change to the performance of the application. Which type of encryption meets these requirements?
 
 - [ ] Server-side encryption using S3-managed keys.
-- [ ] Server-side encryption with AWS KMS-managed keys.
+- [x] Server-side encryption with AWS KMS-managed keys.
 - [ ] Client-side encryption with a client-side symmetric master key.
 - [ ] Client-side encryption with AWS KMS-managed keys.
 
@@ -578,7 +578,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### An application is being developed to audit several AWS accounts. The application will run in Account A and must access AWS services in Accounts B and C. What is the MOST secure way to allow the application to call AWS services in each audited account?
 
-- [ ] Configure cross-account roles in each audited account. Write code in Account A that assumes those roles.
+- [x] Configure cross-account roles in each audited account. Write code in Account A that assumes those roles.
 - [ ] Use S3 cross-region replication to communicate among accounts, with Amazon S3 event notifications to trigger Lambda functions.
 - [ ] Deploy an application in each audited account with its own role. Have Account A authenticate with the application.
 - [ ] Create an IAM user with an access key in each audited account. Write code in Account A that uses those access keys.
@@ -588,7 +588,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A company uses a third-party tool to build, bundle, and package rts applications on-premises and store them locally. The company uses Amazon EC2 instances to run its front-end applications. How can an application be deployed from the source control system onto the EC2 instances?
 
 - [ ] Use AWS CodeDeploy and point it to the local storage to directly deploy a bundle m a zip. tar. or tar.gz format.
-- [ ] Upload the bundle to an Amazon S3 bucket and specify the S3 location when doing a deployment using AWS CodeDeploy.
+- [x] Upload the bundle to an Amazon S3 bucket and specify the S3 location when doing a deployment using AWS CodeDeploy.
 - [ ] Create a repository using AWS CodeCommit to automatically trigger a deployment to the EC2 instances.
 - [ ] Use AWS CodeBuild to automatically deploy the latest build to the latest EC2 instances.
 
@@ -596,7 +596,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A company is building a compute-intensive application that will run on a fleet of Amazon EC2 instances. The application uses attached Amazon EBS disks for storing data. The application will process sensitive information and all the data must be encrypted. What should a developer do to ensure the data is encrypted on disk without impacting performance?
 
-- [ ] Configure the Amazon EC2 instance fleet to use encrypted EBS volumes for storing data.
+- [x] Configure the Amazon EC2 instance fleet to use encrypted EBS volumes for storing data.
 - [ ] Add logic to write all data to an encrypted Amazon S3 bucket.
 - [ ] Add a custom encryption algorithm to the application that will encrypt and decrypt all data.
 - [ ] Create a new Amazon Machine Image (AMI) with an encrypted root volume and store the data to ephemeral disks.
@@ -607,7 +607,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Create multiple prefix in the S3 bucket to increase the request rate.
 - [ ] Create an Amazon ElastiCache cluster to cache and serve frequently accessed items.
-- [ ] Use Amazon CloudFront to serve the content of images stored in Amazon S3.
+- [x] Use Amazon CloudFront to serve the content of images stored in Amazon S3.
 - [ ] Submit a ticket to AWS support to request a rate limit increase for the S3 bucket.
 
 **[⬆ Back to Top](#table-of-contents)**
