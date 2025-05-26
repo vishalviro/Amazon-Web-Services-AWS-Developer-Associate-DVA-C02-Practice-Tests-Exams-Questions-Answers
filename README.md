@@ -616,7 +616,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Use the default AWS KMS customer master key for S3 in the Lambda function code.
 - [ ] Use the S3 managed key and call the GenerateDataKey API to encrypt the file.
-- [ ] Use the GenerateDataKey API, then use that data key to encrypt the file in the Lambda function code.
+- [x] Use the GenerateDataKey API, then use that data key to encrypt the file in the Lambda function code.
 - [ ] Use a custom KMS customer master key created for S3 in the Lambda function code.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -626,7 +626,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Enable versioning on the cdfonts bucket for each web font.
 - [ ] Create a policy on the cdfonts bucket to enable access to everyone.
 - [ ] Add the Content-MD5 header to the request for webfonts in the cdfonts bucket from the website.
-- [ ] Configure the cdfonts bucket to allow cross-origin requests by creating a CORS configuration.
+- [x] Configure the cdfonts bucket to allow cross-origin requests by creating a CORS configuration.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -634,8 +634,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] sam init.
 - [ ] sam validate.
-- [ ] sam build.
-- [ ] sam deploy.
+- [x] sam build.
+- [x] sam deploy.
 - [ ] sam publish.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -644,14 +644,14 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] All at once.
 - [ ] Rolling.
-- [ ] Rolling with additional batch.
+- [x] Rolling with additional batch.
 - [ ] Immutable.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Developer is creating an application that needs to locate the public IPv4 address of the Amazon EC2 instance on which it runs. How can the application locate this information?
 
-- [ ] Get the instance metadata by retrieving http://169.254.169.254/latest/metadata/.
+- [x] Get the instance metadata by retrieving http://169.254.169.254/latest/metadata/.
 - [ ] Get the instance user data by retrieving http://169.254.169.254/latest/userdata/.
 - [ ] Get the application to run IFCONFIG to get the public IP address.
 - [ ] Get the application to run IPCONFIG to get the public IP address.
@@ -663,7 +663,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Create a single API Gateway with all three stages.
 - [ ] Create three API Gateways, one for each stage in a single AWS account.
 - [ ] Create an API Gateway in three separate AWS accounts.
-- [ ] Enable the cache for development and test environments only when needed.
+- [x] Enable the cache for development and test environments only when needed.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -671,14 +671,14 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Add database retries to effectively use RDS with vertical scaling.
 - [ ] Use RDS with multi-AZ deployment.
-- [ ] Add a connection string to use an RDS read replica for read queries.
+- [x] Add a connection string to use an RDS read replica for read queries.
 - [ ] Add a connection string to use a read replica on an EC2 instance.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A developer needs to modify an application architecture to meet new functional requirements. Application data is stored in Amazon DynamoDB and processed for analysis in a nightly batch. The system analysts do not want to wait unit the next day to view the processed data and have asked to have it available in near-real time. Which application architect pattern would enables the data to be processed as it is received?
 
-- [ ] Event driven.
+- [x] Event driven.
 - [ ] Client served driven.
 - [ ] Fan-out driven.
 - [ ] Schedule driven.
@@ -698,7 +698,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Server-side encryption with Amazon S3 managed keys (SSE-S3).
 - [ ] Server-side encryption with customer-provided encryption keys (SSE-C).
-- [ ] Server-side encryption with AWS KMS managed keys (SSE-KMS).
+- [x] Server-side encryption with AWS KMS managed keys (SSE-KMS).
 - [ ] Client-side encryption.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -706,7 +706,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### An application uses Amazon Kinesis Data Streams to ingest and process large streams of data records in real time. Amazon EC2 instances consume and process the data from the shards of the Kinesis data stream by using Amazon Kinesis Client Library (KCL). The application handles the failure scenarios and does not require standby workers. The application reports that a specific shard is receiving more data than expected. To adapt to the changes in the rate of data flow, the 'hot' shard is resharded. Assuming that the initial number of shards in the Kinesis data stream is 4, and after resharding the number of shards increased to 6, what is the maximum number of EC2 instances that can be deployed to process data from all the shards?
 
 - [ ] 12.
-- [ ] 6.
+- [x] 6.
 - [ ] 4.
 - [ ] 1.
 
@@ -717,23 +717,23 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] AWS Lambda.
 - [ ] Amazon S3.
 - [ ] Amazon DynamoDB.
-- [ ] Amazon Cognito.
+- [x] Amazon Cognito.(AWS Amplify DataStore (backed by AWS AppSync))
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Developer is making changes to a custom application that is currently using AWS Elastic Beanstalk. After the Developer completes the changes, what solutions will update the Elastic Beanstalk environment with the new application version? (Choose TWO)
 
-- [ ] Package the application code into a .zip file, and upload, then deploy the packaged application from the AWS Management Console.
+- [x] Package the application code into a .zip file, and upload, then deploy the packaged application from the AWS Management Console.
 - [ ] Package the application code into a .tar file, create a new application version from the AWS Management Console, then update the environment by using AWS CLI.
 - [ ] Package the application code into a .tar file, and upload and deploy the packaged application from the AWS Management Console.
-- [ ] Package the application code into a .zip file, create a new application version from the packaged application by using AWS CLI, then update the environment by using AWS CLI.
+- [x] Package the application code into a .zip file, create a new application version from the packaged application by using AWS CLI, then update the environment by using AWS CLI.
 - [ ] Package the application code into a .zip file, create a new application version from the AWS Management Console, then rebuild the environment by using AWS CLI.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company is running an application built on AWS Lambda functions. One Lambda function has performance issues when it has to download a 50MB file from the Internet in every execution. This function is called multiple times a second. What solution would give the BEST performance increase?
 
-- [ ] Cache the file in the /tmp directory.
+- [x] Cache the file in the /tmp directory.
 - [ ] Increase the Lambda maximum execution time.
 - [ ] Put an Elastic Load Balancer in front of the Lambda function.
 - [ ] Cache the file in Amazon S3.
@@ -743,7 +743,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### Queries to an Amazon DynamoDB table are consuming a large amount of read capacity. The table has a significant number of large attributes. The application does not need all of the attribute data. How can DynamoDB costs be minimized while maximizing application performance?
 
 - [ ] Batch all the writes, and perform the write operations when no or few reads are being performed.
-- [ ] Create a global secondary index with a minimum set of projected attributes.
+- [x] Create a global secondary index with a minimum set of projected attributes.
 - [ ] Implement exponential backoffs in the application.
 - [ ] Load balance the reads to the table using an Application Load Balancer.
 
@@ -754,7 +754,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Enable request validation.
 - [ ] Include the Amazon Resource Name (ARN) of the Lambda function.
 - [ ] Change the integration type.
-- [ ] Create a mapping template.
+- [x] Create a mapping template.(create  mapping template in  Integration Request.)
 
 **[⬆ Back to Top](#table-of-contents)**
 
