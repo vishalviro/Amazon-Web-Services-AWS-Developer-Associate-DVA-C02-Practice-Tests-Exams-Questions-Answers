@@ -761,7 +761,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A development team is creating a new application designed to run on AWS. While the test and production environments will run on Amazon EC2 instances, developers will each run their own environment on their laptops. Which of the following is the simplest and MOST secure way to access AWS services from the local development machines?
 
 - [ ] Use an IAM role to assume a role and execute API calls using the role.
-- [ ] Create an IAM user to be shared with the entire development team, provide the development team with the access key.
+- [x] Create an IAM user to be shared with the entire development team, provide the development team with the access key.
 - [ ] Create an IAM user for each developer on the team: provide each developer with a unique access key.
 - [ ] Set up a federation through an Amazon Cognito user pool.
 
@@ -770,7 +770,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### How is provisioned throughput affected by the chosen consistency model when reading data from a DynamoDB table?
 
 - [ ] Strongly consistent reads use the same amount of throughput as eventually consistent reads.
-- [ ] Strongly consistent reads use more throughput than eventually consistent reads.
+- [x] Strongly consistent reads use more throughput than eventually consistent reads.
 - [ ] Strongly consistent reads use less throughput than eventually consistent reads.
 - [ ] Strongly consistent reads use variable throughput depending on read activity.
 
@@ -778,7 +778,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A developer needs to deploy a new version to an AWS Elastic Beanstalk application. How can the developer accomplish this task?
 
-- [ ] Upload and deploy the new application version in the Elastic Beanstalk console.
+- [x] Upload and deploy the new application version in the Elastic Beanstalk console.
 - [ ] Use the eb init CLI command to deploy a new version.
 - [ ] Terminate the current Elastic Beanstalk environment and create a new one.
 - [ ] Modify the ebextensions folder to add a source option to services.
@@ -787,7 +787,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A gaming application stores scores for players in an Amazon DynamoDB table that has four attributes: user_id, user_name, user_score, and user_rank. The users are allowed to update their names only if a user is authenticated by web identity federation. Which set of conditions should be added in the policy attached to the role for the DynamoDB: PutItem API call?
 
-- [ ] Option A.
+- [x] Option A.
 ![Question 30 option A](images/question30_A.jpg)
 - [ ] Option B.
 ![Question 30 option B](images/question30_B.jpg)
@@ -801,7 +801,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A developer wants the ability to roll back to a previous version of an AWS Lambda function in the event of errors caused by a new deployment. How can the developer achieve this with MINIMAL impact on users?
 
 - [ ] Change the application to use an alias that points to the current version. Deploy the new version of the code. Update the alias to use the newly deployed version. If too many errors are encountered, point the alias back to the previous version.
-- [ ] Change the application to use an alias that points to the current version. Deploy the new version of the code. Update the alias to direct 10% of users to the newly deployed version. If too many errors are encountered, send 100% of traffic to the previous version.
+- [x] Change the application to use an alias that points to the current version. Deploy the new version of the code. Update the alias to direct 10% of users to the newly deployed version. If too many errors are encountered, send 100% of traffic to the previous version.
 - [ ] Do not make any changes to the application Deploy the new version of the code. If too many errors are encountered, point the application back to the previous version using the version number in the Amazon Resource Name (ARN).
 - [ ] Create three aliases: new, existing, and router. Point the existing alias to the current version. Have the router alias direct 100% of users to the existing alias. Update the application to use the router alias. Deploy the new version of the code. Point the new alias to this version. Update the router alias to direct 10% of users to the new alias. If too many errors are encountered, send 100% of traffic to the existing alias.
 
@@ -810,7 +810,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### An application contains two components: one component to handle HTTP requests, and another component to handle background processing tasks. Each component must scale independently. The developer wants to deploy this application using AWS Elastic Beanstalk. How should this application be deployed, based on these requirements?
 
 - [ ] Deploy the application in a single Elastic Beanstalk environment.
-- [ ] Deploy each component in a separate Elastic Beanstalk environment.
+- [x] Deploy each component in a separate Elastic Beanstalk environment.
 - [ ] Use multiple Elastic Beanstalk environments for the HTTP component but one environment for the background task component.
 - [ ] Use multiple Elastic Beanstalk environments for the background task component but one environment for the HTTP component.
 
@@ -818,7 +818,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A company is using AWS CloudFormation templates to deploy AWS resources. The company needs to update one of its AWS CloudFormation stacks. What can the company do to find out how the changes will impact the resources that are running?
 
-- [ ] Investigate the change sets.
+- [x] Investigate the change sets.
 - [ ] Investigate the stack policies.
 - [ ] Investigate the Metadata section.
 - [ ] Investigate the Resources section.
@@ -829,7 +829,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Associate different AWS Lambda functions to an API Gateway target endpoint.
 - [ ] Create different stages in API Gateway, then associate API Gateway with aws Lambda.
-- [ ] Create aliases and versions In AWS Lambda.
+- [x] Create aliases and versions In AWS Lambda.(Use Lambda versions and aliases, and configure API Gateway to invoke the alias.
+Then, simply update the alias after each deployment — no need to modify API Gateway.)
 - [ ] Tag the AWS Lambda functions with different names.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -839,23 +840,23 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Install certificates on the EC2 instances.
 - [ ] Create a bucket policy that allows traffic where SecureTransport is true.
 - [ ] Create an HTTPS redirect on the EC2 instances.
-- [ ] Create a bucket policy that denies traffic where SecureTransport is false.
+- [x] Create a bucket policy that denies traffic where SecureTransport is false.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A supplier is writing a new RESTful API for customers to query the status of orders. The customers requested the following API endpoint http://www.supplierdomain.com/status/customerID. Which of the following application designs meet the requirements? (Select TWO)
 
 - [ ] Amazon SQS; Amazon SNS.
-- [ ] Elastic Load Balancing; Amazon EC2.
+- [x] Elastic Load Balancing; Amazon EC2.
 - [ ] Amazon ElastiCache; Amazon Elacticsearch Service.
-- [ ] Amazon API Gateway; AWS Lambda.
+- [x] Amazon API Gateway; AWS Lambda.
 - [ ] Amazon S3; Amazon CloudFront.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A developer Is designing an AWS Lambda function that create temporary files that are less than 10 MB during execution. The temporary files will be accessed and modified multiple times during execution. The developer has no need to save or retrieve these files in the future. Where should the temporary file be stored?
 
-- [ ] the /tmp directory.
+- [x] the /tmp directory.
 - [ ] Amazon EFS.
 - [ ] Amazon EBS.
 - [ ] Amazon S3.
@@ -865,7 +866,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A website's page load times are gradually increasing as more users access the system at the same time. Analysis indicates that a user profile is being loaded from a database in all the web pages being visited by each user and this is increasing the database load and the page load latency. To address this issue the Developer decides to cache the user profile data. Which caching strategy will address this situation MOST efficiently?
 
 - [ ] Create a new Amazon EC2 Instance and run a NoSQL database on it. Cache the profile data within this database using the write-through caching strategy.
-- [ ] Create an Amazon ElastiCache cluster to cache the user profile data. Use a cache-aside caching strategy.
+- [x] Create an Amazon ElastiCache cluster to cache the user profile data. Use a cache-aside caching strategy.
 - [ ] Use a dedicated Amazon RDS instance for caching profile data. Use a write-through caching strategy.
 - [ ] Create an ElastiCache cluster to cache the user profile data. Use a write-through caching strategy.
 
@@ -875,14 +876,14 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Use AWS VM Import to migrate a web server image to AWS Launch the image on a compute-optimized Amazon EC2 instance.
 - [ ] Launch multiple Amazon Lightsail instance behind a load balancer. Set up the website on those instances.
-- [ ] Deploy the website code in an AWS Elastic Beanstalk environment. Use Auto Scaling to scale the numbers of instance.
+- [x] Deploy the website code in an AWS Elastic Beanstalk environment. Use Auto Scaling to scale the numbers of instance.
 - [ ] Use Amazon S3 to host the website. Use Amazon CloudFornt to deliver the content at scale.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A developer is writing an AWS Lambda function. The developer wants to log key events that occur during the Lambda function and include a unique identifier to associate the events with a specific function invocation. Which of the following will help the developer accomplish this objective?
 
-- [ ] Obtain the request identifier from the Lambda context object. Architect the application to write logs to the console.
+- [x] Obtain the request identifier from the Lambda context object. Architect the application to write logs to the console.
 - [ ] Obtain the request identifier from the Lambda event object. Architect the application to write logs to a file.
 - [ ] Obtain the request identifier from the Lambda event object. Architect the application to write logs to the console.
 - [ ] Obtain the request identifier from the Lambda context object. Architect the application to write logs to a file.
@@ -891,10 +892,10 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A company stores all personally identifiable information (PII) in an Amazon DynamoDB table named PII in Account A. An application running on Amazon EC2 instances in Account B requires access to the PII table. An administrators in Account A created an IAM role named AccessPII with privileges to access the PII table, and made account B a trusted entity. Which combination of actional steps should Developers take to access the table? (Select TWO)
 
-- [ ] Allow the EC2 IAM role the permission to assume the AccessPII role.
+- [x] Allow the EC2 IAM role the permission to assume the AccessPII role.
 - [ ] Allow the EC2 IAM role the permission to access the PII table.
 - [ ] Include the AWS API in the application code logic to obtain temporary credentials from the EC2 IAM role to access the PII table.
-- [ ] Include the AssumeRole API operation in the application code logic to obtain temporary credentials to access the PII table.
+- [x] Include the AssumeRole API operation in the application code logic to obtain temporary credentials to access the PII table.
 - [ ] Include the GetSessionToken API operation in the application code logic to obtain temporary credentials to access the PII table.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -904,14 +905,14 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Add DynamoDB as an event source to the Lambda function. View the performance with Amazon CloudWatch metrics.
 - [ ] Place an Application Load Balancer (ALB) in front of the two DynamoDB tables. Inspect the ALB logs.
 - [ ] Limit Lambda to no more than five concurrent invocations Monitor from the Lambda console.
-- [ ] Enable AWS X-Ray tracing for the function. View the traces from the X-Ray service.
+- [x] Enable AWS X-Ray tracing for the function. View the traces from the X-Ray service.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An Amazon RDS database instance is used by many applications to look up historical data. The query rate is relatively constant. When the historical data is updated each day, the resulting write traffic slows the read query performance and affects all application users. What can be done to eliminate the performance impact on application users?
 
 - [ ] Make sure Amazon RDS is Multi-AZ so it can better absorb increased traffic.
-- [ ] Create an RDS Read Replica and direct all read traffic to the replica.
+- [x] Create an RDS Read Replica and direct all read traffic to the replica.
 - [ ] Implement Amazon ElastiCache in front of Amazon RDS to buffer the write traffic.
 - [ ] Use Amazon DynamoDB instead of Amazon RDS to buffer the read traffic.
 
@@ -920,7 +921,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A company is developing a serverless ecommerce web application. The application needs to make coordinated, all-or-nothing changes to multiple items in the company's inventory table in Amazon DynamoDB. Which solution will meet these requirements?
 
 - [ ] Enable transactions for the DynamoDB table. Use the BatchWriteltem operation to update the items.
-- [ ] Use the TransactWriteitems operation to group the changes. Update the items in the table.
+- [x] Use the TransactWriteitems operation to group the changes. Update the items in the table.
 - [ ] Set up a FIFO queue using Amazon SQS. Group the changes in the queue. Update the table based on the grouped changes.
 - [ ] Create a transaction table in an Amazon Aurora DB cluster to manage the transactions. Write a backend process to sync the Aurora DB table and the DynamoDB table.
 
@@ -931,14 +932,16 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Use the PUT Object API call to send data to an S3 bucket. Use an event notification to invoke a Lambda function to publish data to CloudWatch.
 - [ ] Publish the metric data to an Amazon Kinesis Stream using a PutRecord API call. Subscribe a Lambda function that publishes data to CloudWatch.
 - [ ] Use the CloudWatch PutMetricData API call to submit a custom metric to CloudWatch. Provide the required credentials to enable the API call.
-- [ ] Use the CloudWatch PutMetricData API call to submit a custom metric to CloudWatch. Launch the EC2 instance with the required IAM role to enable the API call.
+- [x] Use the CloudWatch PutMetricData API call to submit a custom metric to CloudWatch. Launch the EC2 instance with the required IAM role to enable the API call.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Developer needs to design an application running on AWS that will be used to consume Amazon SQS messages that range from 1 KB up to 1GB in size. How should the Amazon SQS messages be managed?
 
 - [ ] Use Amazon S3 and the Amazon SQS CLI.
-- [ ] Use Amazon S3 and the Amazon SQS Extended Client Library for Java.
+- [x] Use Amazon S3 and the Amazon SQS Extended Client Library for Java.(To handle SQS messages larger than 256 KB,
+   🔄 Use Amazon S3 for payload storage
+   🧠 Use the Amazon SQS Extended Client Library for Java to manage message references and simplify logic.)
 - [ ] Use Amazon EBS and the Amazon SQS CLI.
 - [ ] Use Amazon EFS and the Amazon SQS CLI.
 
@@ -947,7 +950,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A developer has written a multi-threaded application that is running on a fleet of Amazon EC2 instances. The operations team has requested a graphical method to monitor the number of running threads over time. What is the MOST efficient way to fulfill this request?
 
 - [ ] Periodically send the thread count to AWS X-Ray segments, then generate a service graph on demand.
-- [ ] Create a custom Amazon CloudWatch metric and periodically perform a PutMetricData call with the current thread count.
+- [x] Create a custom Amazon CloudWatch metric and periodically perform a PutMetricData call with the current thread count.
 - [ ] Periodically log thread count data to Amazon S3. Use Amazon Kinesis to process the data into a graph.
 - [ ] Periodically write the current thread count to a table using Amazon DynarnoDB and use Amazon CloudFront to create a graph.
 
@@ -957,9 +960,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ![Question 48](images/question48.jpg)
 
-- [ ] Package only the modules the Lambda function requires.
+- [x] Package only the modules the Lambda function requires.
 - [ ] Use Amazon DynamoDB instead of Amazon RDS.
-- [ ] Move the initialization of the variable Amazon RDS connection outside of the handler function.
+- [x] Move the initialization of the variable Amazon RDS connection outside of the handler function.
 - [ ] Implement custom database connection pooling with the Lambda function.
 - [ ] Implement local caching of Amazon RDS data so Lambda can re-use the cache.
 
@@ -967,17 +970,17 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### An application on AWS is using third-party APIs. The Developer needs to monitor API errors in the code, and wants to receive notifications if failures go above a set threshold value. How can the Developer achieve these requirements?
 
-- [ ] Publish a custom metric on Amazon CloudWatch and use Amazon Simple Email Service (SES) for notification.
+- [] Publish a custom metric on Amazon CloudWatch and use Amazon Simple Email Service (SES) for notification.
 - [ ] Use an Amazon CloudWatch API-error metric and use Amazon Simple Notification Service (SNS) for notification.
 - [ ] Use an Amazon CloudWatch API-error metric and use Amazon SES for notification.
-- [ ] Publish a custom metric on Amazon CloudWatch and use Amazon SNS for notification.
+- [x] Publish a custom metric on Amazon CloudWatch and use Amazon SNS for notification.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### The release process workflow of an application requires a manual approval before the code is deployed into the production environment. What is the BEST way to achieve this using AWS CodePipeline?
 
 - [ ] Use multiple pipelines to allow approval.
-- [ ] Use an approval action in a stage.
+- [x] Use an approval action in a stage.
 - [ ] Disable the stage transition to allow manual approval.
 - [ ] Disable a stage just prior the deployment stage.
 
@@ -985,7 +988,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A Developer is asked to implement a caching layer in front of Amazon RDS. Cached content is expensive to regenerate in case of service failure. Which implementation below would work while maintaining maximum uptime?
 
-- [ ] Implement Amazon ElastiCache Redis in Cluster Mode.
+- [x] Implement Amazon ElastiCache Redis in Cluster Mode.(For a resilient, scalable, and durable caching solution in front of Amazon RDS,
+use Amazon ElastiCache Redis in Cluster Mode — supports high availability and data partitioning.)
 - [ ] Install Redis on an Amazon EC2 instance.
 - [ ] Implement Amazon ElastiCache Memcached.
 - [ ] Migrate the database to Amazon Redshift.
@@ -994,9 +998,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A company has written a Java AWS Lambda function to be triggered whenever a user uploads an image to an Amazon S3 bucket. The function converts the original image to several different formats and then copies the resulting images to another Amazon S3 bucket. The Developers find that no images are being copied to the second Amazon S3 bucket. They have tested the code on an Amazon EC2 instance with 1GB of RAM, and it takes an average of 500 seconds to complete. What is the MOST likely cause of the problem?
 
-- [ ] The Lambda function has insufficient memory and needs to be increased to 1 GB to match the Amazon EC2 instance.
+- [] The Lambda function has insufficient memory and needs to be increased to 1 GB to match the Amazon EC2 instance.
 - [ ] Files need to be copied to the same Amazon S3 bucket for processing, so the second bucket needs to be deleted.
-- [ ] Lambda functions have a maximum execution limit of 15 minutes, therefore the function is not completing.
+- [x] Lambda functions have a maximum execution limit of 15 minutes, therefore the function is not completing.(Your Java Lambda function likely hits or approaches the 15-minute timeout limit, causing it to fail before completion.Lambda timeout + memory tuning or job splitting is the right approach.)
 - [ ] There is a problem with the Java runtime for Lambda, and the function needs to be converted to node.js.
 
 **[⬆ Back to Top](#table-of-contents)**
