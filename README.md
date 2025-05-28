@@ -998,7 +998,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 ### A company has written a Java AWS Lambda function to be triggered whenever a user uploads an image to an Amazon S3 bucket. The function converts the original image to several different formats and then copies the resulting images to another Amazon S3 bucket. The Developers find that no images are being copied to the second Amazon S3 bucket. They have tested the code on an Amazon EC2 instance with 1GB of RAM, and it takes an average of 500 seconds to complete. What is the MOST likely cause of the problem?
 
-- [] The Lambda function has insufficient memory and needs to be increased to 1 GB to match the Amazon EC2 instance.
+- [ ] The Lambda function has insufficient memory and needs to be increased to 1 GB to match the Amazon EC2 instance.
 - [ ] Files need to be copied to the same Amazon S3 bucket for processing, so the second bucket needs to be deleted.
 - [x] Lambda functions have a maximum execution limit of 15 minutes, therefore the function is not completing.(Your Java Lambda function likely hits or approaches the 15-minute timeout limit, causing it to fail before completion.Lambda timeout + memory tuning or job splitting is the right approach.)
 - [ ] There is a problem with the Java runtime for Lambda, and the function needs to be converted to node.js.
@@ -1010,14 +1010,14 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] Enable SSL connections to Kinesis.
 - [ ] Use Amazon Kinesis Consumer Library.
 - [ ] Encrypt the data once it is at rest with a Lambda function.
-- [ ] Enable server-side encryption in Kinesis Streams.
+- [x] Enable server-side encryption in Kinesis Streams.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Developer is creating a mobile application with a limited budget. The solution requires a scalable service that will enable customers to sign up and authenticate into the mobile application while using the organization's current SAML 2.0 identity provider. Which AWS service should be used to meet these requirements?
 
 - [ ] AWS Lambda.
-- [ ] Amazon Cognito.
+- [x] Amazon Cognito.
 - [ ] AWS IAM.
 - [ ] Amazon EC2.
 
@@ -1028,7 +1028,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] An Amazon SNS topic to be triggered when a concurrent user threshold is met.
 - [ ] An Amazon Cloudwatch NetworkIn metric.
 - [ ] Amazon CloudFront to leverage AWS Edge Locations.
-- [ ] A Custom Amazon CloudWatch metric for concurrent users.
+- [x] A Custom Amazon CloudWatch metric for concurrent users.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1036,7 +1036,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] Deploy using Amazon Lambda API operations to create the Lambda function by providing a deployment package.
 - [ ] Use an AWS CloudFormation template and use CloudFormation syntax to define the Lambda function resource in the template.
-- [ ] Use syntax conforming to the Serverless Application Model in the AWS CloudFormation template to define the Lambda function resource.
+- [x] Use syntax conforming to the Serverless Application Model in the AWS CloudFormation template to define the Lambda function resource.
 - [ ] Create a bash script which uses AWS CLI to package and deploy the application.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1044,7 +1044,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ### A game stores user game data in an Amazon DynamoDB table. Individual users should not have access to other users' game data. How can this be accomplished?
 
 - [ ] Encrypt the game data with individual user keys.
-- [ ] Restrict access to specific items based on certain primary key values.
+- [x] Restrict access to specific items based on certain primary key values(To ensure that users only access their own game data, you can use fine-grained access control in Amazon)
 - [ ] Stage data in SQS queues to inject metadata before accessing DynamoDB.
 - [ ] Read records from DynamoDB and discard irrelevant data client-side.
 
@@ -1054,7 +1054,9 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] IAM temporary credentials using AWS STS.
 - [ ] Amazon Directory Service.
-- [ ] Amazon Cognito with unauthenticated access enabled.
+- [x] Amazon Cognito with unauthenticated access enabled.(Amazon Cognito allows developers to create authentication flows for both:
+Authenticated users (e.g., via email/password, social login, etc.)
+Unauthenticated (guest) users, by enabling "unauthenticated identities" in the identity pool.)
 - [ ] IAM with SAML integration
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1064,7 +1066,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ![Question 59](images/question59.jpg)
 
 - [ ] Use AWS CloudFormation compile to base64 encode and embed the source file into a modified CloudFormation template.
-- [ ] Use AWS CloudFormation package to upload the source code to an Amazon S3 bucket and produce a modified CloudFormation template.
+- [x] Use AWS CloudFormation package to upload the source code to an Amazon S3 bucket and produce a modified CloudFormation template.
 - [ ] Use AWS Lambda zip to package the source file together with the CloudFormation template and deploy the resulting zip archive.
 - [ ] Use AWS Serverless create-package to embed the source file directly into the existing CloudFormation template.
 
@@ -1074,14 +1076,14 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] Submit a limit increase request to AWS Support to increase the function to the size needed.
 - [ ] Use a compression algorithm that is more efficient than ZIP.
-- [ ] Break the function into multiple smaller Lambda functions.
+- [x] Break the function into multiple smaller Lambda functions.
 - [ ] ZIP the ZIP file twice to compress it further.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A serverless application uses an API Gateway and AWS Lambda. Where should the Lambda function store its session information across function calls?
 
-- [ ] In an Amazon DynamoDB table.
+- [x] In an Amazon DynamoDB table.
 - [ ] In an Amazon SQS queue.
 - [ ] In the local filesystem.
 - [ ] In an SQLite session table using CDSQLITE_ENABLE_SESSION.
@@ -1091,7 +1093,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ### An application reads data from an Amazon DynamoDB table. Several times a day, for a period of 15 seconds, the application receives multiple ProvisionedThroughputExceeded errors. How should this exception be handled?
 
 - [ ] Create a new global secondary index for the table to help with the additional requests.
-- [ ] Retry the failed read requests with exponential backoff.
+- [x] Retry the failed read requests with exponential backoff.
 - [ ] Immediately retry the failed read requests.
 - [ ] Use the DynamoDB 'UpdateItem' API to increase the provisioned throughput capacity of the table.
 
@@ -1102,14 +1104,16 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] Immutable.
 - [ ] Rolling.
 - [ ] All at Once.
-- [ ] Rolling with additional batch.
+- [x] Rolling with additional batch.(Ensures full capacity is maintained throughout the update.
+After new instances are healthy, old instances are replaced one batch at a time.
+Best fit when you want zero downtime and to minimize cost (compared to full duplication like immutable))
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### When writing a Lambda function, what is the benefit of instantiating AWS clients outside the scope of the handler?
 
 - [ ] Legibility and stylistic convention.
-- [ ] Taking advantage of connection re-use.
+- [x] Taking advantage of connection re-use.
 - [ ] Better error handling.
 - [ ] Creating a new instance per invocation.
 
@@ -1120,7 +1124,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] AWS Data Pipeline.
 - [ ] AWS SNS with AWS SQS.
 - [ ] Amazon Elastic MapReduce.
-- [ ] AWS Step Functions.
+- [x] AWS Step Functions.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1129,13 +1133,18 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] Create a new Identity and Access Management (IAM) instance profile containing the required permissions for the various ECS services, then associate that instance role with the underlying EC2 instances.
 - [ ] Create four distinct IAM roles, each containing the required permissions for the associated ECS service, then configure each ECS service to reference the associated IAM role.
 - [ ] Create four distinct IAM roles, each containing the required permissions for the associated ECS service, then, create an IAM group and configure the ECS cluster to reference that group.
-- [ ] Create four distinct IAM roles, each containing the required permissions for the associated ECS service, then configure each ECS task definition to referenсe the associated IAM role.
+- [x] Create four distinct IAM roles, each containing the required permissions for the associated ECS service, then configure each ECS task definition to referenсe the associated IAM role.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Developer must re-implement the business logic for an order fulfilment system. The business logic has to make requests to multiple vendors to decide where to purchase an item. The whole process can take up to a week to complete. What is the MOST efficient and SIMPLEST way to implement a system that meets these requirements?
 
-- [ ] Use AWS Step Functions to execute parallel Lambda functions, and join the results.
+- [x] Use AWS Step Functions to execute parallel Lambda functions, and join the results.
+the best solution is AWS Step Functions, which supports:
+Long-running workflows (up to 1 year),
+Built-in error handling and retries,
+Parallel execution, and
+Coordination between tasks like joining multiple Lambda responses.)
 - [ ] Create an AWS SQS for each vendor, poll the queue from a worker instance, and joint the results.
 - [ ] Use AWS Lambda to asynchronously call a Lambda function for each vendor, and join the results.
 - [ ] Use Amazon CloudWatch Events to orchestrate the Lambda functions.
@@ -1156,7 +1165,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] Contact AWS Support for a limit increase.
 - [ ] Use the AWS CLI to get the metrics.
 - [ ] Analyze the applications and remove the API call.
-- [ ] Retry the call with exponential backoff.
+- [x] Retry the call with exponential backoff.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1165,13 +1174,18 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] Amazon SNS with fanout to an SQS queue for each application.
 - [ ] Amazon SNS with fanout to an SQS FIFO (first-in, first-out) queue for each application.
 - [ ] Amazon Kinesis Firehouse.
-- [ ] Amazon Kinesis Streams.
-
+- [x] Amazon Kinesis Streams.
+For real-time processing of millions of events with multiple concurrent consumers, Amazon Kinesis Data Streams is the most suitable and cost-effective option.
+Why Kinesis Streams?
+Supports real-time ingestion and processing.
+Allows multiple consumers (e.g., Lambda functions, custom apps) to read the same data concurrently.
+Offers fine-grained control over shard capacity (scale based on throughput).
+Supports long-term replay of stream data (up to 7 days retention by default).
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Where should the appspec.yml file be placed in order for AWS CodeDeploy to work?
 
-- [ ] In the root of the application source code directory structure.
+- [x] In the root of the application source code directory structure.
 - [ ] In the bin folder along with all the complied code.
 - [ ] In an S3 bucket.
 - [ ] In the same folder as the application configuration files.
@@ -1180,7 +1194,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 ### An application will ingest data at a very high throughput from many sources and must store the data in an Amazon S3 bucket. Which service would BEST accomplish this task?
 
-- [ ] Amazon Kinesis Firehose.
+- [x] Amazon Kinesis Firehose.
 - [ ] Amazon S3 Acceleration Transfer.
 - [ ] Amazon SQS.
 - [ ] Amazon SNS.
@@ -1192,13 +1206,13 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 - [ ] Install the dependencies and external libraries at the beginning of the Lambda function.
 - [ ] Create a Lambda deployment package that includes the external libraries.
 - [ ] Copy the external libraries to Amazon S3, and reference the external libraries to the S3 location.
-- [ ] Install the external libraries in Lambda Layer to be available to all Lambda functions.
+- [x] Install the external libraries in Lambda Layer to be available to all Lambda functions.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### During non-peak hours, a Developer wants to minimize the execution time of a full Amazon DynamoDB table scan without affecting normal workloads. The workloads average half of the strongly consistent read capacity units during non-peak hours. How would the Developer optimize this scan?
 
-- [ ] Use parallel scans while limiting the rate.
+- [x] Use parallel scans while limiting the rate.This approach speeds up the scan by leveraging parallelism but controls the read rate to avoid capacity exhaustion and impact on normal workloads.
 - [ ] Use sequential scans.
 - [ ] Increase read capacity units during the scan operation.
 - [ ] Change consistency to eventually consistent during the scan operation.
@@ -1207,7 +1221,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 ### A large e-commerce site is being designed to deliver static objects from Amazon S3. The Amazon S3 bucket will server more than 300 GET requests per second. What should be done to optimize performance? (Choose TWO)
 
-- [ ] Integrate Amazon CloudFront with Amazon S3.
+- [x] Integrate Amazon CloudFront with Amazon S3.
 - [ ] Enable Amazon S3 cross-region replication.
 - [ ] Delete expired Amazon S3 server log files.
 - [ ] Configure Amazon S3 lifecycle rules.Randomize Amazon S3 key name prefixes.
@@ -1217,7 +1231,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 ### A legacy service has an XML-based SOAP interface. The Developer wants to expose the functionality of the service to external clients with the Amazon API Gateway. Which technique will accomplish this?
 
-- [ ] Create a RESTful API with the API Gateway; transform the incoming JSON into a valid XML message for the SOAP interface using mapping templates.
+- [x] Create a RESTful API with the API Gateway; transform the incoming JSON into a valid XML message for the SOAP interface using mapping templates.
 - [ ] Create a RESTful API with the API Gateway; pass the incoming JSON to the SOAP interface through an Application Load Balancer.
 - [ ] Create a RESTful API with the API Gateway; pass the incoming XML to the SOAP interface through an Application Load Balancer.
 - [ ] Create a RESTful API with the API Gateway; transform the incoming XML into a valid message for the SOAP interface using mapping templates.
@@ -1227,7 +1241,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ### A Developer has an application that can upload tens of thousands of objects per second to Amazon S3 in parallel within a single AWS account. As part of new requirements, data stored in S3 must use server side encryption with AWS KMS (SSE-KMS). After creating this change, performance of the application is slower. Which of the following is MOST likely the cause of the application latency?
 
 - [ ] Amazon S3 throttles the rate at which uploaded objects can be encrypted using Customer Master Keys.
-- [ ] The AWS KMS API calls limit is less than needed to achieve the desired performance.
+- [x] The AWS KMS API calls limit is less than needed to achieve the desired performance.When using SSE-KMS (server-side encryption with AWS Key Management Service), every object upload that uses SSE-KMS requires a call to AWS KMS to generate, encrypt, or decrypt the data encryption key
 - [ ] The client encryption of the objects is using a poor algorithm.
 - [ ] KMS requires that an alias be used to create an independent display name that can be mapped to a CM.
 
@@ -1235,7 +1249,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 ### A customer wants to deploy its source code on an AWS Elastic Beanstalk environment. The customer needs to perform deployment with minimal outage and should only use existing instances to retain application access log. What deployment policy would satisfy these requirements?
 
-- [ ] Rolling.
+- [x] Rolling.
 - [ ] All at once.
 - [ ] Rolling with an additional batch.
 - [ ] Immutable.
@@ -1246,7 +1260,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] Lambda will receive each record in the reverse order it was placed into the stream following a LIFO (last-in, first-out) method.
 - [ ] Lambda will receive each record in the exact order it was placed into the stream following a FIFO (first­-in, first-out) method.
-- [ ] Lambda will receive each record in the exact order it was placed into the shard following a FIFO (first-in, first-out) method. There is no guarantee of order across shards.
+- [x] Lambda will receive each record in the exact order it was placed into the shard following a FIFO (first-in, first-out) method. There is no guarantee of order across shards.
 - [ ] The Developer can select FIFO, (first-in, first-out), LIFO (last-in, last-out), random, or request specific record using the getRecords API.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1254,7 +1268,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ### An organization must store thousands of sensitive audio and video files in an Amazon S3 bucket. Organizational security policies require that all data written to this bucket be encrypted. How can compliance with this policy be ensured?
 
 - [ ] Use AWS Lambda to send notifications to the security team if unencrypted objects are pun in the bucket.
-- [ ] Configure an Amazon S3 bucket policy to prevent the upload of objects that do not contain the x-amz­-server-side-encryption header.
+- [x] Configure an Amazon S3 bucket policy to prevent the upload of objects that do not contain the x-amz­-server-side-encryption header.
 - [ ] Create an Amazon CloudWatch event rule to verify that all objects stored in the Amazon S3 bucket are encrypted.
 - [ ] Configure an Amazon S3 bucket policy to prevent the upload of objects that contain the x-amz-server­side-encryption header.
 
@@ -1264,7 +1278,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] Configure each sender with a unique MessageGroupId.
 - [ ] Enable MessageDeduplicationIds on the SQS queue.
-- [ ] Configure each message with unique MessageGroupIds.
+- [x] Configure each message with unique MessageGroupIds.
 - [ ] Enable ContentBasedDeduplication on the SQS queue.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1272,7 +1286,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ### A Developer created a dashboard for an application using Amazon API Gateway, Amazon S3, AWS Lambda, and Amazon RDS. The Developer needs an authentication mechanism allowing a user to sign in and view the dashboard. It must be accessible from mobile applications, desktops, and tablets, and must remember user preferences across platforms. Which AWS service should the Developer use to support this authentication scenario?
 
 - [ ] AWS KMS.
-- [ ] Amazon Cognito.
+- [x] Amazon Cognito.
 - [ ] AWS Directory Service.
 - [ ] Amazon IAM.
 
@@ -1282,7 +1296,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] Apply tags to the Lambda functions.
 - [ ] Hardcore resources in the source code.
-- [ ] Use environment variables for the Lambda functions.
+- [x] Use environment variables for the Lambda functions.
 - [ ] Use separate function for development and production.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1291,7 +1305,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 
 - [ ] Use the Amazon Cognito user pools to get short-lived credentials for the second account.
 - [ ] Create a dedicated IAM access key for the second account, and send it by mail.
-- [ ] Create a cross-account access role, and use sts: AssumeRole API to get short-lived credentials.
+- [x] Create a cross-account access role, and use sts: AssumeRole API to get short-lived credentials.
 - [ ] Establish trust, and add an SSH key for the second account to the IAM user.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1299,7 +1313,7 @@ use Amazon ElastiCache Redis in Cluster Mode — supports high availability and 
 ### A Developer needs to use AWS X-Ray to monitor an application that is deployed on EC2 instances. What steps have to be executed to perform the monitoring?
 
 - [ ] Deploy the X-Ray SDK with the application and use X-Ray annotation.
-- [ ] Install the X-Ray daemon and instrument the application code.
+- [x] Install the X-Ray daemon and instrument the application code.
 - [ ] Install the X-Ray daemon and configure it to forward data to Amazon CloudWatch Events.
 - [ ] Deploy the X-Ray SDK with the application and instrument the application code.
 
